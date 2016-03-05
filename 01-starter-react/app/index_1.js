@@ -4,9 +4,9 @@ var HelloWorld = React.createClass({
     render: function(){
         return (
             <div>
-                Hello World! thinhvoxuan
+                Hello World! {this.props.name}
             </div>
         )
     }
 });
-ReactDOM.render(<HelloWorld />, document.getElementById('app'));
+ReactDOM.render(<HelloWorld name="Vi Nguyen" />, document.getElementById('app'));
