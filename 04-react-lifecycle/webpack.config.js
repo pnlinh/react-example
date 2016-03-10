@@ -1,3 +1,4 @@
+// In webpack.config.js
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
     template: __dirname + '/app/index.html',
@@ -6,7 +7,7 @@ var HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
 });
 module.exports = {
     entry: [
-        './app/index_2.js'
+        './app/index.jsx'
     ],
     output: {
         path: __dirname + '/dist',
@@ -14,7 +15,7 @@ module.exports = {
     },
     module: {
         loaders: [
-            {test: /\.js$/, exclude: /node_modules/, loader: "babel-loader"}
+            {test: /\.jsx$/, exclude: /node_modules/, loader: "babel-loader"}
         ]
     },
     plugins: [HTMLWebpackPluginConfig]

@@ -29,8 +29,12 @@ var EmailInput = React.createClass({
         return (
             <div className="col-md-3">
                 <div className={formGroupName}>
-                    <label className="control-label" htmlFor="inputError1">Enter your email: </label>
-                    <input className="form-control" value={this.props.email} onChange={this.props.onEmailChange}/>
+                    <label className="control-label"
+                           htmlFor="inputError1">Enter your email:
+                    </label>
+                    <input className="form-control"
+                           value={this.props.email}
+                           onChange={this.props.onEmailChange}/>
                     {iconSpan}
                 </div>
             </div>
@@ -54,7 +58,8 @@ var Home = React.createClass({
         return (
             <div className="col-md-12">
                 <h2> Home Page </h2>
-                <EmailInput email={this.state.email} onEmailChange={this.handlerEmailChange} />
+                <EmailInput email={this.state.email}
+                            onEmailChange={this.handlerEmailChange} />
             </div>
         )
     }
