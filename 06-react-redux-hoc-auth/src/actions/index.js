@@ -1,7 +1,9 @@
-import AUTHENTICATION_ACTION from './types'
-export function authentication(logged ){
+import { AUTHENTICATION_ACTION } from './types'
+export function authenActionCreator(logged ){
   return {
-    action: AUTHENTICATION_ACTION,
-    payload: logged
+    type: AUTHENTICATION_ACTION,
+    payload: {
+      logged: logged
+    }
   }
 }
